@@ -1,26 +1,48 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-primary: #6a1b4d;
+  --color-primary-dark: #3a0d2c;
+  --color-accent: #c6a24b;
+  --color-soft: #d9b1c7;
+  --color-blush: #f3e6ef;
+  --color-ink: #3a0d2c;
+  --color-muted: #7d5a70;
+  --color-line: #e6ccdb;
+  --font-sans: var(--font-poppins);
+  --font-display: var(--font-playfair);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-blush);
+  color: var(--color-ink);
+}
+
+input[type="range"] {
+  accent-color: var(--color-primary);
+}
+
+/* Hover hint for icon buttons: <button data-tip="What it does"> */
+[data-tip] {
+  position: relative;
+}
+[data-tip]:hover::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: var(--color-primary-dark);
+  color: var(--color-blush);
+  font-size: 12px;
+  font-weight: 500;
+  pointer-events: none;
+  z-index: 10;
 }
