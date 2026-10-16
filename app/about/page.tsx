@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Gem, Heart, Lock, Sparkles } from "lucide-react";
+import DeveloperCard from "../components/DeveloperCard";
 import FeatureCard from "../components/FeatureCard";
 import PageHero from "../components/PageHero";
 import Section from "../components/Section";
@@ -33,6 +34,9 @@ export default function About() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {VALUES.map(v => <FeatureCard key={v.title} {...v} />)}
         </div>
+      </Section>
+      <Section id="developer" kicker="Meet the developer" title="Designed & built by Siddharth Jain" text="VIP Editor — the app and this website — is designed and developed by one person.">
+        <DeveloperCard />
       </Section>
     </>
   );

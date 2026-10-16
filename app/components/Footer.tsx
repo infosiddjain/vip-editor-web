@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import { NAV } from "./nav";
+import SocialLinks from "./SocialLinks";
+import { DEVELOPER } from "./developer";
 
 export default function Footer() {
   return (
@@ -16,7 +18,18 @@ export default function Footer() {
           ))}
         </nav>
       </div>
-      <p className="border-t border-white/10 py-4 text-center text-xs">© 2026 VIP Editor. All rights reserved.</p>
+      <div className="border-t border-white/10">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-6 text-xs md:flex-row md:justify-between">
+          <p>© 2026 VIP Editor. All rights reserved.</p>
+          <p>
+            Designed &amp; developed by{" "}
+            <a href={DEVELOPER.portfolio} target="_blank" rel="noopener noreferrer" className="font-semibold text-accent hover:underline">
+              {DEVELOPER.name}
+            </a>
+          </p>
+          <SocialLinks light />
+        </div>
+      </div>
     </footer>
   );
 }
