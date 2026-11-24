@@ -26,7 +26,7 @@ const BLOCKS: Block[] = [
   },
   { heading: "Children's privacy", body: <p>VIP Editor does not knowingly collect personal information from children under 13.</p> },
   { heading: "Changes to this policy", body: <p>We may update this policy from time to time. Changes will be posted on this page with a new “last updated” date.</p> },
-  { heading: "Contact", body: <p>Questions about privacy? Reach us through the <a href="/contact" className="font-semibold text-primary underline">contact page</a>.</p> },
+  { heading: "Contact", body: <p>Questions about privacy? Email <a href="mailto:infosiddjain@gmail.com" className="font-semibold text-primary underline">infosiddjain@gmail.com</a> or use the <a href="/contact" className="font-semibold text-primary underline">contact page</a>.</p> },
 ];
 
 export default function Privacy() {

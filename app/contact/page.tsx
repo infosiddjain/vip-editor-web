@@ -7,7 +7,7 @@ import Section from "../components/Section";
 export const metadata: Metadata = { title: "Contact" };
 
 const INFO = [
-  { icon: Mail, title: "Email", text: "support@vipeditor.app" },
+  { icon: Mail, title: "Email", text: "infosiddjain@gmail.com" },
   { icon: Clock, title: "Response time", text: "Within 1–2 business days" },
   { icon: MessageSquare, title: "Feedback", text: "Feature ideas are always welcome" },
 ];
